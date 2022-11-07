@@ -12,7 +12,7 @@ const getIndex = (arr) => {
     return Math.floor(Math.random() * arr.length)
 }
 
-const present_picker = (names) => {
+const presentPicker = (names) => {
     const present_list = {}
     const to_give = [...names]
     const to_receive = [...names]
@@ -35,10 +35,10 @@ const present_picker = (names) => {
         }
         return present_list
     } catch (e) {
-        if (e === 'Duplicate') return present_picker(names)
+        if (e === 'Duplicate') return presentPicker(names)
     }
 }
 
-const give_list = present_picker(names)
+const give_list = presentPicker(names)
 console.table(give_list)
 
